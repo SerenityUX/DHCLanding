@@ -111,7 +111,9 @@ export default function Home() {
           Coding is a super power, and through utilizing code we can make the impossible, possible. We’re the space where you will learn how to harness the power of code.
           <br/>
           <br/>
+          <p>
           You’re welcome to come to Dorman Hack Club every Monday afterschool in room C104. 
+          </p>
           <br/>
           <br/>
           Enter your email below to offically sign up
