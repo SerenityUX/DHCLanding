@@ -138,7 +138,7 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
-        <p>Dorman High School's Hack Club</p>
+        <p>Dorman High School Hack Club</p>
       </footer>
     </div>
   )
