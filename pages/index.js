@@ -17,7 +17,7 @@ export default function Home() {
         "Subject": "Hello from Postmark",
         "HtmlBody": "<strong>Hello</strong> dear Postmark user.",
         "TextBody": "Hello from Postmark!",
-        "MessageStream": "inbound"
+        "MessageStream": "outbound"
       }).then((response) => {
         console.log(response)
       })
