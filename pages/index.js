@@ -36,8 +36,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <a href="https://hackclub.com/"><img style={{position: "fixed", bottom: 16, left: "0px", border: 0, width: "256px", zIndex: 999}} src={"https://assets.hackclub.com/flag-orpheus-left.svg"} alt={"Hack Club"}/></a>
-        <section style={{background: "linear-gradient(180deg, #FF6A3C, #E54A19)", marginTop: "-64px", paddingTop: "64px", marginBottom: "32px", paddingBottom: "64px", marginLeft: "-128px", paddingLeft: "128px", marginRight: "-128px", paddingRight: "128px"}}>
+      <a href="https://hackclub.com/"><img style={{position: "absolute", top: 0, right: "128px", border: 0, width: "192px", zIndex: 999}} src="https://assets.hackclub.com/flag-orpheus-top.svg" alt="Hack Club"/></a>        <section style={{background: "linear-gradient(180deg, #FF6A3C, #E54A19)", marginTop: "-64px", paddingTop: "64px", marginBottom: "32px", paddingBottom: "64px", marginLeft: "-128px", paddingLeft: "128px", marginRight: "-128px", paddingRight: "128px"}}>
         <header className={styles.header}>
       
           <div className={styles.headerImage}>
