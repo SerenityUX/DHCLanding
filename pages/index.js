@@ -95,7 +95,7 @@ export default function Home() {
           </p>
           <div>
           {roles.map((role, i) => (
-            <div>
+            <div key={i}>
               <p>{role}</p>
             </div>
           ))}
