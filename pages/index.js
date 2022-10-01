@@ -118,7 +118,9 @@ export default function Home() {
           </p>
           <input type="email" placeholder="Corgi@d6edu.edu" onChange={e => setEmail(e.target.value)} />
             {
-                email.includes("d6edu.org") || email == "" ? <p></p> : <p>Please enter your Dorman Email Address</p>
+                email.includes("d6edu.org") || email == "" ? 
+                <p></p> : 
+                <p>Please enter your Dorman Email Address</p>
             }
             {
                 email.includes("d6edu.org") ? 
