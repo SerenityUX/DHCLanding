@@ -5,7 +5,9 @@ import { useState } from 'react'
 import React, { Component, useEffect } from "react";
 
 export default function Home() {
-    const roles = ["Front-end Developper", "Back-end Developer", "UI/UX Designer", "UX Researcher", "Visual Identity Designer", "Illustrator", "Project Leader"]
+    const primaryRoles = ["Front-end Developer", "Back-end Developer", "UI/UX Designer", "UX Researcher", "Visual Identity Designer", "Illustrator", "Project Leader"]
+    const secondaryRoles = ["Data Analyst", "Game Developer", "3D Artist", "Interaction Designer", "AR/VR Designer", "& more"]
+
     const [email, setEmail] = useState("");
 
 
@@ -34,32 +36,35 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <header>
-          <div>
-
+        <a href="https://hackclub.com/"><img style={{position: "fixed", bottom: 16, left: "0px", border: 0, width: "256px", zIndex: 999}} src={"https://assets.hackclub.com/flag-orpheus-left.svg"} alt={"Hack Club"}/></a>
+        <section style={{background: "linear-gradient(180deg, #FF6A3C, #E54A19)", marginTop: "-64px", paddingTop: "64px", marginBottom: "32px", paddingBottom: "64px", marginLeft: "-128px", paddingLeft: "128px", marginRight: "-128px", paddingRight: "128px"}}>
+        <header className={styles.header}>
+      
+          <div className={styles.headerImage}>
           </div>
-          <h1 className={styles.headerText}>Dorman Hack Club</h1>
+          <h1 style={{color: "#fff"}} className={styles.headerText}>Dorman Hack Club</h1>
         </header>
-        <h1 className={styles.title}>
-          A Place for Dorman Makers
+        <h1 style={{color: "#fff", marginBottom: "16px", fontWeight: "600"}} className={styles.title}>
+          A Place for Makers
         </h1>
 
-        <p className={styles.description}>
-          We’re a multidisciplinary student organization utilizing technology
+        <p style={{textAlign: "center", color: "#fff"}} className={styles.description}>
+          We’re a DHS student organization utilizing technology <br/>
           to improve the human condition
         </p>
+        </section>
 
-        <section>
-          <h2 className={styles.secondaryTitle}>We innovate by</h2>
+        <section style={{marginBottom: "64px", marginTop: "32px"}}>
+          <h2 style={{marginBottom: "24px"}} className={styles.secondaryTitle}>We innovate by</h2>
+          <div className={styles.processContainer}>
           <div>
-          <div>
-            <div className={styles.processImage}>
+            <div style={{marginBottom: "0px"}}className={styles.processImage}>
             </div>
             {/* Don't forget alt text */}
-            <h3>
+            <h3 style={{fontWeight: "500", opacity: 0.87, marginBottom: "4x", marginTop: "4px"}} className={styles.description}>
               Empathizing
             </h3>
-            <p>
+            <p className={styles.description}>
               We recognize problems in the lives of others.
             </p>
           </div>
@@ -67,10 +72,10 @@ export default function Home() {
             <div className={styles.processImage}>
             </div>
             {/* Don't forget alt text */}
-            <h3>
+            <h3 style={{fontWeight: "500", opacity: 0.87, marginBottom: "4x", marginTop: "4px"}} className={styles.description}>
               Building
             </h3>
-            <p>
+            <p className={styles.description}>
               We research, design, and develop digital solutions.
             </p>
           </div>
@@ -78,64 +83,77 @@ export default function Home() {
             <div className={styles.processImage}>
             </div>
             {/* Don't forget alt text */}
-            <h3>
+            <h3 style={{fontWeight: "500", opacity: 0.87, marginBottom: "4x", marginTop: "4px"}} className={styles.description}>
               Launching
             </h3>
-            <p>
-             We offer our solution to users 
+            <p className={styles.description}>
+             Finally, we offer our solution to users and continue to iterate.
             </p>
           </div>
           </div>
         </section>
 
-        <section>
-          <h2 className={styles.secondaryTitle}>
-            Collaborate as a Pack
+        <section style={{paddingTop: "64px", paddingBottom: "63px", marginBottom: "48px"}} className={styles.packSection}>
+          <h2 style={{marginBottom: "12px"}} className={styles.secondaryTitle}>
+            Collaborate as a <strong>Pack</strong>
           </h2>
-          <p>
-            Each member of each team has unique strengths and
+          <p style={{textAlign: "center", marginBottom: "24px"}} className={styles.description}>
+            Each member of each pack has unique strengths and <br/>
             skills and it is this diversity in skillset that allows us to innovate. 
           </p>
-          <div>
-          {roles.map((role, i) => (
-            <div key={i}>
+          <div className={styles.potentialRoleContainer}>
+          {primaryRoles.map((role, i) => (
+            <div className={styles.potentialRole} key={i}>
+              <p>{role}</p>
+            </div>
+          ))}
+          </div>
+          <div style={{marginTop: "12px"}} className={styles.potentialRoleContainer}>
+          {secondaryRoles.map((role, i) => (
+            <div className={styles.potentialRole} key={i}>
               <p>{role}</p>
             </div>
           ))}
           </div>
         </section>
-        <section>
-          <div>
-          <h2 className={styles.secondaryTitle}>
-          Become a member of 
-          the Dorman Hack Club
-          </h2>
-          <p>
-          Coding is a super power, and through utilizing code we can make the impossible, possible. We’re the space where you will learn how to harness the power of code.
-          </p>
+        <section style={{marginBottom: "48px"}}>
+          <div className={styles.containEnd}>
 
-          <p>
-          You’re welcome to come to Dorman Hack Club every Monday afterschool in room C104. 
-          </p>
+            <div style={{paddingRight: "64px"}} className={styles.endingText}>
+            <h2 style={{textAlign: "left", marginBottom: "16px"}} className={styles.secondaryTitle}>
+            Become a member of 
+            the <strong>Dorman Hack Club</strong>
+            </h2>
+            <p style={{marginBottom: "12px"}} className={styles.description}>
+            We’re the space where you will learn how to harness your inner creative super powers.
+            </p>
 
-          <p>
-          Enter your email below to offically sign up
-          </p>
-          <input type="email" placeholder="Corgi@d6edu.edu" onChange={e => setEmail(e.target.value)} />
-            {
-                email.includes("d6edu.org") || email == "" ? 
-                (<p></p>) : 
-                (<p>Please enter your Dorman Email Address</p>)
-            }
-            {
-                email.includes("d6edu.org") ? 
-                (<button onClick={sendEmail} disabled={false}>
-                  <p>Submit</p>
-                </button>) : 
-                (<button disabled={true}>
-                  <p>Submit</p>
-                </button>)
-            }
+            <p style={{marginBottom: "12px"}} className={styles.description}>
+            You’re welcome to come to Dorman Hack Club every Monday afterschool in room C104. 
+            </p>
+
+            <p style={{marginBottom: "0px", marginTop: "12px", opacity: 0.87, fontSize: 24, lineHeight: 1.25}} className={styles.description}>
+            Email
+            </p>
+            <input className={styles.input}type="email" placeholder="Corgi@d6edu.edu" onChange={e => setEmail(e.target.value)} />
+              {
+                  email.includes("d6edu.org") || email == "" ? 
+                  (<p></p>) : 
+                  (<p style={{marginTop: "0px", marginBottom: "12px", fontSize: "18px", color: "#E54A19"}}>Please enter your Dorman Email Address</p>)
+              }
+              {
+                  email.includes("d6edu.org") ? 
+                  (<button className={styles.button} onClick={sendEmail} disabled={false}>
+                    <p className={styles.buttonText}>Join Club</p>
+                  </button>) : 
+                  (<button className={styles.button} style={{opacity: 0.38}} disabled={true}>
+                    <p className={styles.buttonText}>Join Club</p>
+                  </button>)
+              }
+            </div>
+            <div className={styles.endingScreen}>
+
+            </div>
           </div>
         </section>
       </main>
