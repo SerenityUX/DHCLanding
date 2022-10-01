@@ -9,18 +9,17 @@ export default function Home() {
     const roles = ["Front-end Developper", "Back-end Developer", "UI/UX Designer", "UX Researcher", "Visual Identity Designer", "Illustrator", "Project Leader"]
     const [email, setEmail] = useState("");
 
+
     function sendEmail() {
-      console.log("Email should have been sent")
-      client.sendEmail({
-        "From": "tstubblefield487@d6edu.org",
-        "To": email,
-        "Subject": "Hello from Postmark",
-        "HtmlBody": "<strong>Hello</strong> dear Postmark user.",
-        "TextBody": "Hello from Postmark!",
-        "MessageStream": "outbound"
-      }).then((response) => {
-        console.log(response)
-      })
+    fetch("https://x8ki-letl-twmt.n7.xano.io/api:t-XUHdAp/student", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/JSON"
+      },
+      body: JSON.stringify({
+        email:email,
+      }),
+    }).then((response) => console.log(response));
     }
   return (
     <div className={styles.container}>
