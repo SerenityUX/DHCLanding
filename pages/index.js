@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import logo from '../assets/logo.png'
+
 import { useState } from 'react'
 import React, { Component, useEffect } from "react";
 
@@ -36,12 +38,17 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-      <a href="https://hackclub.com/"><img style={{position: "absolute", top: 0, left: "128px", border: 0, width: "192px", zIndex: 999}} src="https://assets.hackclub.com/flag-orpheus-top.svg" alt="Hack Club"/></a>        <section style={{background: "linear-gradient(180deg, #FF6A3C, #E54A19)", marginTop: "-64px", paddingTop: "64px", marginBottom: "32px", paddingBottom: "64px", marginLeft: "-128px", paddingLeft: "128px", marginRight: "-128px", paddingRight: "128px"}}>
+      <a href="https://hackclub.com/"><img style={{position: "absolute", top: 0, left: "128px", border: 0, width: "192px", zIndex: 999}} src="https://assets.hackclub.com/flag-orpheus-top.svg" alt="Hack Club"/></a>        <section style={{background: "linear-gradient(180deg, #d97d2c, #E54A19)", marginTop: "-64px", paddingTop: "64px", marginBottom: "32px", paddingBottom: "64px", marginLeft: "-128px", paddingLeft: "128px", marginRight: "-128px", paddingRight: "128px"}}>
         <header className={styles.header}>
       
-          <div className={styles.headerImage}>
-          </div>
-          <h1 style={{color: "#fff"}} className={styles.headerText}>Dorman Hack Club</h1>
+        <div className={styles.headerImage}>
+          <Image 
+          className={styles.headerImage}
+          src={logo} 
+          >
+
+          </Image>
+        </div>
         </header>
         <h1 style={{color: "#fff", marginBottom: "16px", fontWeight: "600"}} className={styles.title}>
           A Place for Makers
@@ -97,8 +104,8 @@ export default function Home() {
             Collaborate as a <strong>Pack</strong>
           </h2>
           <p style={{textAlign: "center", marginBottom: "24px"}} className={styles.description}>
-            Each member of each pack has unique strengths and <br/>
-            skills and it is this diversity in skillset that allows us to innovate. 
+            Each member of each pack has unique talents and <br/>
+            interests and it is this diversity in skillset that allows us to innovate. 
           </p>
           <div className={styles.potentialRoleContainer}>
           {primaryRoles.map((role, i) => (
