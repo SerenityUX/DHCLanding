@@ -2,6 +2,9 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import logo from '../assets/logo.png'
+import process1 from '../assets/1.png'
+import process2 from '../assets/2.png'
+import process3 from '../assets/3.png'
 
 import { useState } from 'react'
 import React, { Component, useEffect } from "react";
@@ -65,6 +68,12 @@ export default function Home() {
           <div className={styles.processContainer}>
           <div>
             <div style={{marginBottom: "0px"}}className={styles.processImage}>
+            <Image 
+          className={styles.processImage}
+          src={process1} 
+          >
+
+          </Image>
             </div>
             {/* Don't forget alt text */}
             <h3 style={{fontWeight: "500", opacity: 0.87, marginBottom: "4x", marginTop: "4px"}} className={styles.description}>
@@ -76,6 +85,12 @@ export default function Home() {
           </div>
           <div>
             <div className={styles.processImage}>
+            <Image 
+          className={styles.processImage}
+          src={process2} 
+          >
+
+          </Image>
             </div>
             {/* Don't forget alt text */}
             <h3 style={{fontWeight: "500", opacity: 0.87, marginBottom: "4x", marginTop: "4px"}} className={styles.description}>
@@ -87,6 +102,12 @@ export default function Home() {
           </div>
           <div>
             <div className={styles.processImage}>
+            <Image 
+          className={styles.processImage}
+          src={process3} 
+          >
+
+          </Image>
             </div>
             {/* Don't forget alt text */}
             <h3 style={{fontWeight: "500", opacity: 0.87, marginBottom: "4x", marginTop: "4px"}} className={styles.description}>
