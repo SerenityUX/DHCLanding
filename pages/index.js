@@ -63,11 +63,11 @@ export default function Home() {
         </p>
         </section>
 
-        <section style={{marginBottom: "64px", marginTop: "32px"}}>
+        <section style={{marginBottom: "64px", marginTop: "32px", width: "100%"}}>
           <h2 style={{marginBottom: "24px"}} className={styles.secondaryTitle}>We innovate by</h2>
           <div className={styles.processContainer}>
           <div>
-            <div style={{marginBottom: "0px"}}className={styles.processImage}>
+            <div className={styles.processImage}>
             <Image 
           className={styles.processImage}
           src={process1} 
@@ -120,8 +120,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section style={{paddingTop: "64px", paddingBottom: "63px", marginBottom: "48px"}} className={styles.packSection}>
-          <h2 style={{marginBottom: "12px"}} className={styles.secondaryTitle}>
+        <section style={{paddingTop: "64px", paddingBottom: "63px", marginBottom: "48px", width: "100%"}} className={styles.packSection}>
+          <h2 style={{marginBottom: "12px", width: "100%"}} className={styles.secondaryTitle}>
             Collaborate as a <strong>Pack</strong>
           </h2>
           <p style={{textAlign: "center", marginBottom: "24px"}} className={styles.description}>

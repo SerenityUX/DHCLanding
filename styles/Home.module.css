@@ -9,6 +9,7 @@
     width: calc((100vw - 384px) * (0.333333));
     background-color: #FFEEE9; 
     border-radius: 16px;
+    margin-bottom: 16px;
 
 }
 
@@ -145,4 +146,92 @@
     font-weight: 400;
     font-size: 24px;
     line-height: 24px;
+}
+
+
+@media only screen and (max-width: 1475px){
+    .main {
+        margin: 32px 64px 32px 64px;
+    }
+    .processContainer {
+        display: flex;
+        gap: 32px;
+    }
+    .processImage {
+        height: calc((100vw - 192px) * (0.333333));
+        width: calc((100vw - 192px) * (0.333333));
+        background-color: #FFEEE9; 
+        border-radius: 16px;
+        margin-bottom: 16px;
+    }
+    .description {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 32px;
+        margin: 0;
+        opacity: 0.7;
+    }
+    .secondaryTitle {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        text-align: center;
+        margin: 0;
+        opacity: 0.87;
+    }
+    .potentialRoleContainer {
+        gap: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: calc(100vw - 128px);
+    }
+    .endingScreen {
+        width: calc((100vw - 160px) * 0.5);
+        height: calc(40.70vw);
+        background-color: #FFEEE9;
+        border-radius: 16px;
+        margin-left: 32px;
+    }
+    .endingText {
+        width: calc((100vw - 160px) * 0.5);
+    }
+}
+@media only screen and (max-width: 1275px){
+    .description {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 32px;
+        margin: 0;
+        opacity: 0.7;
+    }
+    .potentialRole {
+        background-color: #FFEEE9;
+        border: 0.25px solid #FFB69E;
+        color: #E54A19;
+        display: inline-block;
+        border-radius: 96px;
+        padding: 2px 12px;
+    }
+}
+@media only screen and (max-width: 1215px){
+    .potentialRole p{
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 1119px){
+    .potentialRole p{
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 600px){
+	/*Big smartphones [426px -> 600px]*/
+}
+
+@media only screen and (max-width: 425px){
+	/*Small smartphones [325px -> 425px]*/
 }
