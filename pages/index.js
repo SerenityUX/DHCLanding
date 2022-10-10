@@ -28,7 +28,7 @@ export default function Home() {
 
     }).then((response) => {
         console.log(response);
-        window.location.replace("https://classroom.google.com/c/NTUxNDg2MTAwMDQx?cjc=w7v7cjv");
+        window.location.replace("https://classroom.google.com/c/NTUyNDcwOTA1ODI0?cjc=ndmyj7ng");
     });
     }
     
