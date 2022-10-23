@@ -63,7 +63,7 @@ export default function Home(props) {
                     }}>Add Your Own</p>
                 </div>
                 {props.worlds.map((world, i) => (
-                <div className={styles.game}>
+                <div key={i} className={styles.game}>
                     <a href={world.link}>
                         <p>{world.name}</p>
                         <p>{world.author}</p>
