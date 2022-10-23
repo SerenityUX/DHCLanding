@@ -1,5 +1,5 @@
 .background {
-    background-color: #FFEEE9;
+    background-color: #ffc6b5;
     width: 100vw;
     height: 100vh;
     margin-top: 0px;
@@ -12,8 +12,9 @@
     width: 75%;
     height: 85%;
     border-radius: 24px;
-    margin: 24px;
+    padding: 24px;
     background: #fff;
+    overflow: scroll;
 }
 
 .topBar {
@@ -21,8 +22,8 @@
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
-    margin-left: 24px;
-    margin-right: 24px;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 .title {
@@ -30,14 +31,120 @@
     font-weight: 600;
     font-size: 32px;
     opacity: 0.87;
+    color: #000;
+    margin-top: 0px;
 }
 
-.add {
+.gameTitle {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 38px;
+    margin-bottom: 4px;
+    margin-top: 0px;
+    opacity: 0.87;
+    color: #E54A19;
+    width: 100%;
+    text-align: center;
+}
 
+.gameDescription {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    margin: 0px;
+    opacity: 0.6;
+    color: #E54A19;
+    width: 100%;
+    text-align: center;
+}
+.add {
     color: #E54A19;
     font-weight: 400;
     font-size: 22px;
     line-height: 24px;
     opacity: 0.7;
     text-decoration: underline;
+    cursor: pointer;
+    margin-top: 0px;
+
+}
+
+.game {
+    width: calc(32% - 6px);
+    height: calc(20% - 8px);
+    border-radius: 16px;
+    padding: 16px;
+    background-color: #FFEEE9;
+    color: #E54A19; 
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.worldContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.input {
+    padding: 12px 20px;
+    margin: 0px 0;
+    box-sizing: border-box;
+    border: 2px solid #F2F2F2;
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: stretch;
+    gap: 16px;
+}
+
+.button {
+    width: 100%;
+    height: 64px;
+    background-color: #E54A19;
+    color: #fff;
+    border: none;
+    padding-left: 48px;
+    padding-right: 48px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border-radius: 16px;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    font-weight: 400;
+    font-size: 16px;
+    margin: 0px;
+    padding-left: 8px;
+    line-height: 18px;
+}
+
+.buttonText {
+    font-weight: 400;
+    font-size: 16px;
+    margin: 0px;
+    padding-left: 8px;
+    line-height: 18px;
+} 
+
+.input {
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #F2F2F2;
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 16px;
+    padding-left: 8px;
+    line-height: 18px;
 }

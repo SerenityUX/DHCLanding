@@ -24,7 +24,7 @@ export async function getServerSideProps(context) {
 export default function Home(props) {
     const primaryRoles = ["Front-end Developer", "Back-end Developer", "UI/UX Designer", "UX Researcher", "Visual Identity Designer", "Illustrator", "Project Leader"]
     const secondaryRoles = ["Data Analyst", "Game Developer", "3D Artist", "Interaction Designer", "AR/VR Designer", "& more"]
-
+    const [addMenu, setAddMenu] = useState(false)
     const [name, setName] = useState("");
     const [author, setAuthor] = useState("");
     const [link, setLink] = useState("");
@@ -59,17 +59,41 @@ export default function Home(props) {
                 <div className={styles.topBar}>
                     <h1 className={styles.title}>Dorman Hack Club Worlds</h1>
                     <p className={styles.add} onClick={() => {
-                        console.log(props.worlds)
-                    }}>Add Your Own</p>
+                        setAddMenu(!addMenu)
+                    }}>
+                        {addMenu == false ? "Add your own" : "Close Menu"
+                        }
+                        </p>
                 </div>
+                {addMenu == true ? (
+                    <div className={styles.inputGroup}>
+                        <div className={styles.eachInputGroup}>
+                            <p className={styles.buttonText}>World Name</p>
+                            <input className={styles.input} placeholder="My Wonderful World" onChange={e => setName(e.target.value)} />
+                        </div>
+                        <div className={styles.eachInputGroup}>
+                            <p className={styles.buttonText}>Authors</p>
+                            <input className={styles.input} placeholder="Thomas and Dieter" onChange={e => setAuthor(e.target.value)} />
+                        </div>
+                        <div className={styles.eachInputGroup}>
+                            <p className={styles.buttonText}>Link</p>
+                            <input className={styles.input} placeholder="https://virtual-reality-5190508.codehs.me/index.html" onChange={e => setLink(e.target.value)} />
+                        </div>
+                        <button className={styles.button} onClick={sendWorld} disabled={false}>
+                            <p className={styles.buttonText}>Submit World</p>
+                        </button>
+                    </div>
+                ) : null}
+                <div className={styles.worldContainer}>
                 {props.worlds.map((world, i) => (
                 <div key={i} className={styles.game}>
                     <a href={world.link}>
-                        <p>{world.name}</p>
-                        <p>{world.author}</p>
+                        <h2 className={styles.gameTitle}>{world.name}</h2>
+                        <p className={styles.gameDescription}>{world.author}</p>
                     </a>
                 </div>
                 ))}
+                </div>
             </div>
       </main>
     </div>
