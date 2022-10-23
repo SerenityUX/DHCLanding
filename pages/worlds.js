@@ -25,7 +25,10 @@ export default function Home(props) {
     const primaryRoles = ["Front-end Developer", "Back-end Developer", "UI/UX Designer", "UX Researcher", "Visual Identity Designer", "Illustrator", "Project Leader"]
     const secondaryRoles = ["Data Analyst", "Game Developer", "3D Artist", "Interaction Designer", "AR/VR Designer", "& more"]
     const [addMenu, setAddMenu] = useState(false)
+    const [submitted, setSubmitted] = useState(false)
+
     const [name, setName] = useState("");
+
     const [author, setAuthor] = useState("");
     const [link, setLink] = useState("");
 
@@ -69,18 +72,25 @@ export default function Home(props) {
                     <div className={styles.inputGroup}>
                         <div className={styles.eachInputGroup}>
                             <p className={styles.buttonText}>World Name</p>
-                            <input className={styles.input} placeholder="My Wonderful World" onChange={e => setName(e.target.value)} />
+                            <input className={styles.input} placeholder="" onChange={e => setName(e.target.value)} />
                         </div>
                         <div className={styles.eachInputGroup}>
                             <p className={styles.buttonText}>Authors</p>
-                            <input className={styles.input} placeholder="Thomas and Dieter" onChange={e => setAuthor(e.target.value)} />
+                            <input className={styles.input} placeholder="" onChange={e => setAuthor(e.target.value)} />
                         </div>
                         <div className={styles.eachInputGroup}>
                             <p className={styles.buttonText}>Link</p>
-                            <input className={styles.input} placeholder="https://virtual-reality-5190508.codehs.me/index.html" onChange={e => setLink(e.target.value)} />
+                            <input className={styles.input} placeholder="" onChange={e => setLink(e.target.value)} />
                         </div>
-                        <button className={styles.button} onClick={sendWorld} disabled={false}>
-                            <p className={styles.buttonText}>Submit World</p>
+                        <button className={styles.button} onClick={() => {
+                            if (name != "" && author != "" && link != "") {
+                                sendWorld()
+                                setAddMenu(false)
+                                window.location.reload(false);
+                            }
+
+                            }} disabled={false}>
+                            <p className={styles.buttonCenterText}>Submit World</p>
                         </button>
                     </div>
                 ) : null}
